@@ -1,0 +1,158 @@
+{
+  "Uuid": "0f854f05-01ef-4acb-9ffe-a66b246186ea",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Exercise",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "NodeType": "PythonScriptNode",
+      "Code": "# Import necessary libraries\r\nimport clr\r\n\r\n# Import Revit API and Dynamo-Revit Interop libraries\r\nclr.AddReference(\"RevitServices\")\r\nfrom RevitServices.Persistence import DocumentManager\r\nfrom RevitServices.Transactions import TransactionManager\r\n\r\nclr.AddReference(\"RevitAPI\")\r\nfrom Autodesk.Revit.DB import *\r\n\r\n# Get the current Revit document\r\ndoc = DocumentManager.Instance.CurrentDBDocument\r\n\r\n# Filter to get all wall elements in the project\r\nwall_collector = FilteredElementCollector(doc).OfClass(Wall)\r\n\r\n# Prepare a list to store wall information\r\nwall_data = []\r\n\r\n# Loop through each wall and retrieve its parameters\r\nfor wall in wall_collector:\r\n    wall_info = {\"Name\": wall.Name, \"Parameters\": {}}\r\n    \r\n    # Loop through parameters of the wall\r\n    for param in wall.Parameters:\r\n        if param.HasValue:\r\n            # Get parameter name and value\r\n            param_name = param.Definition.Name\r\n            try:\r\n                param_value = param.AsString() or param.AsValueString()\r\n            except:\r\n                param_value = \"N/A\"\r\n            # Store parameter data\r\n            wall_info[\"Parameters\"][param_name] = param_value\r\n    \r\n    # Add wall info to the wall_data list\r\n    wall_data.append(wall_info)\r\n\r\n# Output the list of wall data\r\nOUT = wall_data\r\n",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "887151a252b148d0afafad766c63af04",
+      "Inputs": [
+        {
+          "Id": "0c9c5cdc247f4a2b9b5fd89d268ce40c",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "aa4f3c264dd1490ab305e01583c6df6d",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "51f19df41dff42caa3233a006d826aa7",
+      "Inputs": [
+        {
+          "Id": "626766c103864690b240f0fa9d32fbf9",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5556c7208f2c4e279dc041a1a451c46c",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the node's output"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "aa4f3c264dd1490ab305e01583c6df6d",
+      "End": "626766c103864690b240f0fa9d32fbf9",
+      "Id": "334638af163e48f8b6a169e8fae2d850",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.16",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "3.0",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.16.2.5624",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Name": "Python Script",
+        "ShowGeometry": true,
+        "Id": "887151a252b148d0afafad766c63af04",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 283.0,
+        "Y": 164.0
+      },
+      {
+        "Name": "Watch",
+        "ShowGeometry": true,
+        "Id": "51f19df41dff42caa3233a006d826aa7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 525.0,
+        "Y": 117.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}
