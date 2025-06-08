@@ -1,0 +1,490 @@
+{
+  "Uuid": "02b6637e-1cad-4194-88cd-535dd2f906f0",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Final exercise",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfCategory, DSRevitNodesUI",
+      "Id": "4bbd64354ca142139b001bdbeb2b90a5",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "e366994b179643678faabc74559e1367",
+          "Name": "Category",
+          "Description": "The Category",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "afb4ad7394be4fef894c7d06164e18fe",
+          "Name": "Elements",
+          "Description": "An element class.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get all elements of the specified category from the model."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 504,
+      "SelectedString": "OST_Rooms",
+      "Id": "b59339b274e942e98bbdee5fb5ce029b",
+      "NodeType": "ExtensionNode",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0984ea4152054066ad1db322e2fa9acb",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "# STEP 2 ─ Basic statistics\r\nimport pandas as pd\r\nimport numpy as np\r\n\r\nnames, areas, volumes = IN[0], IN[1], IN[2]\r\n\r\ndf = pd.DataFrame({\r\n    \"Room\": names,\r\n    \"Area_ft²\": np.array(areas),\r\n    \"Volume_ft³\": np.array(volumes)\r\n})\r\n\r\naverage_area = df[\"Area_ft²\"].mean()\r\nlargest_idx = df[\"Area_ft²\"].idxmax()\r\nlargest_room = df.loc[largest_idx, \"Room\"]\r\n\r\nOUT = df, average_area, largest_room\r\n",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "be15701ea0dd4a378e9a7f608f6bde6b",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "59a45397883047df9cade1ce9905e953",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0586aaf59ff04cf88fd3550a370f13c6",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6cd8fb4e2254b668cb9322e91e8b253",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "956d4b6dc5f249988aba6adb2b33650c",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "a6c1e218f1c54ac7a5c9363c8f600ca3",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "e0ea5bc3a97c4f359ade8ccca25c9125",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3fba97ac449c461890c1b615ecca450c",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "08ac619ae0e544678dcf7c5bba4234fd",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "63f159e7d69e49d9870339a5b6e5eb26",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "64b920c3421b4acc8592185d1348a59d",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Room.Area",
+      "Replication": "Auto",
+      "Description": "Get room area\n\nRoom.Area: double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "Id": "62cff28d36d744a6be41a21920ddf239",
+      "NodeType": "FunctionNode",
+      "Inputs": [
+        {
+          "Id": "792472d421b6420780d47f5ccdc09094",
+          "Name": "room",
+          "Description": "Revit.Elements.Room",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ffa6c851998c4031a9cb680afe523159",
+          "Name": "double",
+          "Description": "double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "FunctionSignature": "Revit.Elements.Room.Volume",
+      "Replication": "Auto",
+      "Description": "Get room volume\n\nRoom.Volume: double"
+    },
+    {
+      "ConcreteType": "PythonNodeModels.PythonNode, PythonNodeModels",
+      "Code": "# STEP 3 – universal “room chart” node\r\nimport sys, os, tempfile, uuid, pprint\r\nimport pandas as pd, numpy as np\r\nimport matplotlib\r\nmatplotlib.use(\"Agg\")\r\nimport matplotlib.pyplot as plt\r\n\r\n# -----------------------------------------------------------------------\r\n# 1)  DEBUG: see exactly what Dynamo is feeding this node\r\nprint(\">>> DEBUG – types coming in:\")\r\nfor i, obj in enumerate(IN):\r\n    print(f\"IN[{i}] : {type(obj).__name__}  ->  sample: {str(obj)[:60]}\")\r\nprint(\"--------------------------------------------------------------\")\r\n\r\n# -----------------------------------------------------------------------\r\n# 2)  NORMALISE to a DataFrame, handling every common wiring variant\r\ndef to_dataframe(inputs):\r\n    \"\"\"\r\n    Returns (DataFrame, msg).  `inputs` is the list Dynamo passes in.\r\n    \"\"\"\r\n    # Variant A: single DataFrame already\r\n    if len(inputs) == 1 and isinstance(inputs[0], pd.DataFrame):\r\n        return inputs[0], \"took DataFrame directly\"\r\n\r\n    # Variant B: three parallel lists on separate ports\r\n    if len(inputs) == 3 and all(isinstance(x, list) for x in inputs):\r\n        names, areas, volumes = inputs\r\n        return pd.DataFrame({\r\n            \"Room\": names,\r\n            \"Area_ft²\": pd.to_numeric(areas, errors=\"coerce\"),\r\n            \"Volume_ft³\": pd.to_numeric(volumes, errors=\"coerce\")\r\n        }), \"rebuilt DF from three lists\"\r\n\r\n    # Variant C: single list-of-lists  (OUT from step 1 wired straight in)\r\n    if len(inputs) == 1 and isinstance(inputs[0], list) \\\r\n       and len(inputs[0]) == 3 and all(isinstance(x, list) for x in inputs[0]):\r\n        names, areas, volumes = inputs[0]\r\n        return pd.DataFrame({\r\n            \"Room\": names,\r\n            \"Area_ft²\": pd.to_numeric(areas, errors=\"coerce\"),\r\n            \"Volume_ft³\": pd.to_numeric(volumes, errors=\"coerce\")\r\n        }), \"unpacked nested list and rebuilt DF\"\r\n\r\n    raise ValueError(\r\n        \"Unexpected input pattern – check how the node is wired.\"\r\n    )\r\n\r\ndf, how = to_dataframe(IN)\r\nprint(f\">>> DEBUG – DataFrame built using: {how}\")\r\nprint(df.head())   # first 5 rows for sanity\r\nprint(\"--------------------------------------------------------------\")\r\n\r\n# -----------------------------------------------------------------------\r\n# 3)  PLOT\r\nx_pos   = range(len(df))\r\nheights = df[\"Area_ft²\"]\r\n\r\nfig = plt.figure(figsize=(10, 6))\r\nplt.bar(x_pos, heights)\r\nplt.xticks(x_pos, df[\"Room\"], rotation=90)\r\nplt.ylabel(\"Area (ft²)\")\r\nplt.title(\"Room Areas – Snowdon Towers\")\r\nplt.tight_layout()\r\n\r\ntmp_path = os.path.join(\r\n    tempfile.gettempdir(), f\"room_areas_{uuid.uuid4().hex}.png\"\r\n)\r\nfig.savefig(tmp_path); plt.close(fig)\r\n\r\nOUT = df, tmp_path          # DataFrame and image path back to Dynamo\r\n",
+      "Engine": "CPython3",
+      "EngineName": "CPython3",
+      "VariableInputPorts": true,
+      "Id": "729022023c3e422b943fb0726dd6b915",
+      "NodeType": "PythonScriptNode",
+      "Inputs": [
+        {
+          "Id": "99a9c68a1ed640c7b1f07f06a3bdb6cf",
+          "Name": "IN[0]",
+          "Description": "Input #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3d6b32bbcae74ef89d2ba2be1053760a",
+          "Name": "IN[1]",
+          "Description": "Input #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "be8d74df107e4525a8a43fde5625bc15",
+          "Name": "IN[2]",
+          "Description": "Input #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3bcbe59372a8482fb13962b0af8ccf3a",
+          "Name": "OUT",
+          "Description": "Result of the python script",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Runs an embedded Python script."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "WatchWidth": 200.0,
+      "WatchHeight": 200.0,
+      "Id": "d0715bd8b07342d3900910c245836e2a",
+      "NodeType": "ExtensionNode",
+      "Inputs": [
+        {
+          "Id": "1800475cd0ea43dd8de46cfa4439c8d3",
+          "Name": "",
+          "Description": "Node to show output from",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f89f21efe166424cb3493c877ee25f17",
+          "Name": "",
+          "Description": "Node output",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualizes a node's output"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "afb4ad7394be4fef894c7d06164e18fe",
+      "End": "59a45397883047df9cade1ce9905e953",
+      "Id": "585c32d452bf46dd8a20418a8baec9eb",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "afb4ad7394be4fef894c7d06164e18fe",
+      "End": "63f159e7d69e49d9870339a5b6e5eb26",
+      "Id": "f2e6c5ab75df4b38a001a8934ad16d9d",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "afb4ad7394be4fef894c7d06164e18fe",
+      "End": "792472d421b6420780d47f5ccdc09094",
+      "Id": "44cb04f5bc4b4f918a1df964c673e4fe",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "afb4ad7394be4fef894c7d06164e18fe",
+      "End": "99a9c68a1ed640c7b1f07f06a3bdb6cf",
+      "Id": "3bbf1552be1c4534b8240a92133337ea",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "0984ea4152054066ad1db322e2fa9acb",
+      "End": "e366994b179643678faabc74559e1367",
+      "Id": "4b0e456a853b4beb8f0605c68cc9d529",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "956d4b6dc5f249988aba6adb2b33650c",
+      "End": "e0ea5bc3a97c4f359ade8ccca25c9125",
+      "Id": "a5206791a13a4ad0871e89d6e2769f12",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "64b920c3421b4acc8592185d1348a59d",
+      "End": "0586aaf59ff04cf88fd3550a370f13c6",
+      "Id": "a2e51d7a82324ec597b0e5724c347e3a",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "64b920c3421b4acc8592185d1348a59d",
+      "End": "3d6b32bbcae74ef89d2ba2be1053760a",
+      "Id": "fe64f835c6d04fe78de6a0eaa7144996",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ffa6c851998c4031a9cb680afe523159",
+      "End": "b6cd8fb4e2254b668cb9322e91e8b253",
+      "Id": "55f972fe5e6c491ca94d800fb3146afc",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "ffa6c851998c4031a9cb680afe523159",
+      "End": "be8d74df107e4525a8a43fde5625bc15",
+      "Id": "f6e32c821d4d4bf5a2716930db524019",
+      "IsHidden": "False"
+    },
+    {
+      "Start": "3bcbe59372a8482fb13962b0af8ccf3a",
+      "End": "1800475cd0ea43dd8de46cfa4439c8d3",
+      "Id": "30ed3a0cc56044f8ba7cca792a08dafa",
+      "IsHidden": "False"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Thumbnail": "",
+  "GraphDocumentationURL": null,
+  "ExtensionWorkspaceData": [
+    {
+      "ExtensionGuid": "28992e1d-abb9-417f-8b1b-05e053bee670",
+      "Name": "Properties",
+      "Version": "2.19",
+      "Data": {}
+    },
+    {
+      "ExtensionGuid": "DFBD9CC0-DB40-457A-939E-8C8555555A9D",
+      "Name": "Generative Design",
+      "Version": "6.1",
+      "Data": {}
+    }
+  ],
+  "Author": "",
+  "Linting": {
+    "activeLinter": "None",
+    "activeLinterId": "7b75fb44-43fd-4631-a878-29f4d5d8399a",
+    "warningCount": 0,
+    "errorCount": 0
+  },
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.19.3.6394",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "_Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "ConnectorPins": [],
+    "NodeViews": [
+      {
+        "Id": "4bbd64354ca142139b001bdbeb2b90a5",
+        "Name": "All Elements of Category",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 410.39999999999975,
+        "Y": 312.40000000000003
+      },
+      {
+        "Id": "b59339b274e942e98bbdee5fb5ce029b",
+        "Name": "Categories",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 124.00000000000011,
+        "Y": 304.40000000000003
+      },
+      {
+        "Id": "be15701ea0dd4a378e9a7f608f6bde6b",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 996.00000000000023,
+        "Y": 307.60000000000008
+      },
+      {
+        "Id": "a6c1e218f1c54ac7a5c9363c8f600ca3",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1230.4,
+        "Y": 255.60000000000008
+      },
+      {
+        "Id": "08ac619ae0e544678dcf7c5bba4234fd",
+        "Name": "Room.Area",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 716.0,
+        "Y": 473.2
+      },
+      {
+        "Id": "62cff28d36d744a6be41a21920ddf239",
+        "Name": "Room.Volume",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 717.60000000000014,
+        "Y": 618.80000000000018
+      },
+      {
+        "Id": "729022023c3e422b943fb0726dd6b915",
+        "Name": "Python Script",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1037.6000000000001,
+        "Y": 650.79999999999984
+      },
+      {
+        "Id": "d0715bd8b07342d3900910c245836e2a",
+        "Name": "Watch",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "ShowGeometry": true,
+        "X": 1273.7035582594665,
+        "Y": 578.75357055063114
+      }
+    ],
+    "Annotations": [],
+    "X": -78.896329242402544,
+    "Y": -123.59042531679347,
+    "Zoom": 1.0298856394709863
+  }
+}
