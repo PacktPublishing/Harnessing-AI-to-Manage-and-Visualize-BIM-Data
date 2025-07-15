@@ -1,0 +1,78 @@
+﻿"{""UniqueId"":""21e4664f-3da0-4f3c-9e66-e114a2bdc44d"",""DisplayName"":""GUID"",""Name"":""GUID"",""OtherParamType"":3,""IsType"":false,""IsReadOnly"":true,""IsShared"":false,""SharedGuid"":null,""ScheduleId"":0,""UsedParams"":[],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""String"",""IsYesNoParam"":false}","{""UniqueId"":""6d788b5a-c3a3-414f-ba42-f844e3863634"",""DisplayName"":""Element ID"",""Name"":""Element ID"",""OtherParamType"":3,""IsType"":false,""IsReadOnly"":true,""IsShared"":false,""SharedGuid"":null,""ScheduleId"":0,""UsedParams"":[],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""String"",""IsYesNoParam"":false}","{""UniqueId"":""340a4390-16c7-435e-b51a-e374616ccfce"",""DisplayName"":""Room Number"",""Name"":""Number"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":false,""SharedGuid"":null,""ScheduleId"":2492997,""UsedParams"":[-1006901],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""String"",""IsYesNoParam"":false}","{""UniqueId"":""f4d37a57-4701-4674-9211-cbb83d86ff4b"",""DisplayName"":""Room Name"",""Name"":""Name"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":false,""SharedGuid"":null,""ScheduleId"":2492997,""UsedParams"":[-1006900],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""String"",""IsYesNoParam"":false}","{""UniqueId"":""2c5bf1e8-b39f-4b23-96aa-83f0d41a5d84"",""DisplayName"":""Area"",""Name"":""Area"",""OtherParamType"":2,""IsType"":false,""IsReadOnly"":true,""IsShared"":false,""SharedGuid"":null,""ScheduleId"":2492997,""UsedParams"":[-1006902],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":null,""IsYesNoParam"":false}","{""UniqueId"":""3971316f-024e-48e3-8523-151944b1ae4f"",""DisplayName"":""PACKT_Incl"",""Name"":""PACKT_Incl"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""aea614a6-5bdc-4af0-8d65-c25d1709f91a"",""ScheduleId"":2492997,""UsedParams"":[2493008],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Integer"",""IsYesNoParam"":true}","{""UniqueId"":""4700ee25-9a73-476b-b6ee-480377a27fb5"",""DisplayName"":""PACKT_clo"",""Name"":""PACKT_clo"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""b5205632-ce54-46eb-b656-05f00c3bb410"",""ScheduleId"":2492997,""UsedParams"":[2492986],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""ca3c7d51-0fbc-42b9-95d2-8691aaeb2305"",""DisplayName"":""PACKT_met"",""Name"":""PACKT_met"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""6ffbcb10-e256-4a47-a246-a064f14bc5f0"",""ScheduleId"":2492997,""UsedParams"":[2492982],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""954bbfc4-66e3-4c87-91c9-c724a5d4827d"",""DisplayName"":""PACKT_Nocc"",""Name"":""PACKT_Nocc"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""37118052-5a54-44ae-82f7-c1c9222e5a92"",""ScheduleId"":2492997,""UsedParams"":[2492988],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Integer"",""IsYesNoParam"":false}","{""UniqueId"":""465f72c4-2cfa-402a-bbdd-4a3875469885"",""DisplayName"":""PACKT_rh"",""Name"":""PACKT_rh"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""92558072-cf87-461d-bd3e-7b00df8c67de"",""ScheduleId"":2492997,""UsedParams"":[2492992],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""6a883ad6-1ac4-4485-af0b-17875ec916ed"",""DisplayName"":""PACKT_Tdb"",""Name"":""PACKT_Tdb"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""4c7ba373-7a5a-4cec-9f9f-bd9b8f86c57c"",""ScheduleId"":2492997,""UsedParams"":[2493089],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""3c82b931-b96d-4c8c-9051-c8b7d9ca95bc"",""DisplayName"":""PACKT_Tr"",""Name"":""PACKT_Tr"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""cc7fa580-1ad8-4678-bbd0-75d97d021b9d"",""ScheduleId"":2492997,""UsedParams"":[2493091],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""025719eb-774c-45d7-b3aa-46209dc26edf"",""DisplayName"":""PACKT_Vr"",""Name"":""PACKT_Vr"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""ac2dd115-b003-4cba-a5a2-b43a2d0369a8"",""ScheduleId"":2492997,""UsedParams"":[2493070],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""ad0f4467-ee7b-4289-ac38-41f9eeec64a3"",""DisplayName"":""PACKT_W"",""Name"":""PACKT_W"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""dff0ed98-9dc7-4094-aae1-32599e03ae34"",""ScheduleId"":2492997,""UsedParams"":[2492984],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""3ce94957-ec89-4760-9656-38106c19324c"",""DisplayName"":""PACKT_PMV"",""Name"":""PACKT_PMV"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""9beefad2-9e1c-4368-bb3c-eccd01320798"",""ScheduleId"":2492997,""UsedParams"":[2493055],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}","{""UniqueId"":""326e07eb-c442-4a43-9ad1-20bddfa5ceb4"",""DisplayName"":""PACKT_CI"",""Name"":""PACKT_CI"",""OtherParamType"":1,""IsType"":false,""IsReadOnly"":false,""IsShared"":true,""SharedGuid"":""df9f20b6-f6ab-48c0-bb43-5792f7ef0ae0"",""ScheduleId"":2492997,""UsedParams"":[2493057],""StartIndex"":2,""IsExportedByType"":false,""ExportType"":0,""ParamStorageType"":""Double"",""IsYesNoParam"":false}",
+GUID,"Element ID
+Custom Parameter","Room Number
+String
+Instance
+Identity Data","Room Name
+String
+Instance
+Identity Data","Area
+Schedule Parameter","PACKT_Incl
+Integer (Yes/No)
+Instance
+Other","PACKT_clo
+Double
+Instance
+Other","PACKT_met
+Double
+Instance
+Other","PACKT_Nocc
+Integer
+Instance
+Other","PACKT_rh
+Double
+Instance
+Other","PACKT_Tdb
+Double
+Instance
+Other","PACKT_Tr
+Double
+Instance
+Other","PACKT_Vr
+Double
+Instance
+Other","PACKT_W
+Double
+Instance
+Other","PACKT_PMV
+Double
+Instance
+Other","PACKT_CI
+Double
+Instance
+Other",
+aa350a87-58a2-40c5-a479-a69db973baca-000ca45c,828508,101,Café,60 m²,Yes,0.5,1.2,24,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca463,828515,102,Café Kitchen,40 m²,Yes,0.5,1.2,3,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca476,828534,105,Commercial/Retail,138 m²,Yes,0.5,1.2,50,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca479,828537,106,Residential Lobby,89 m²,Yes,0.5,1.2,10,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca484,828548,108,Commercial/Retail,214 m²,Yes,0.5,1.2,70,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca487,828551,109,Commercial/Retail,105 m²,Yes,0.5,1.2,25,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca8d0,829648,201,Corridor,55 m²,Yes,0.5,1.2,3,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca90d,829709,202,Live/Work Unit,78 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca910,829712,203,Studio Unit,55 m²,Yes,0.5,1.2,1,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca913,829715,204,Two Story Studio Unit,53 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+aa350a87-58a2-40c5-a479-a69db973baca-000ca916,829718,205,Live/Work Unit,103 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+a953768c-aa1e-4a99-94fd-241860fdbaf7-00213b00,2177792,200,Mezzanine Dining,79 m²,Yes,0.5,1.2,66,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca979,829817,301,Office Unit,225 m²,Yes,0.5,1.2,24,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca980,829824,302,Corridor,61 m²,Yes,0.5,1.2,3,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca99a,829850,303,Live/Work Unit,78 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca99d,829853,304,Studio Unit,55 m²,Yes,0.5,1.2,1,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca9a3,829859,306,Live/Work Unit,106 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca9a6,829862,307,Live/Work Unit,103 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca9a9,829865,308,Live/Work Unit,54 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca9ac,829868,309,Live/Work Unit,71 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000ca9c8,829896,401,Office Unit,216 m²,Yes,0.5,1.2,22,35,28,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacd3,830675,406,Two Story Studio Unit,53 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacd4,830676,402,Corridor,59 m²,Yes,0.5,1.2,3,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacd6,830678,403,Live/Work Unit,78 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacd8,830680,404,Studio Unit,55 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacda,830682,407,Live/Work Unit,106 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacdc,830684,408,Live/Work Unit,103 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cacde,830686,409,Live/Work Unit,54 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cace0,830688,410,Live/Work Unit,71 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+8dd6f36e-c3c3-4f56-8d51-5f14900ffe7e-000cd5be,841150,405,Live/Work Loft Unit,67 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cad09,830729,501,Office Unit,208 m²,Yes,0.5,1.2,20,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cad72,830834,502,Corridor,75 m²,Yes,0.5,1.2,3,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cadbd,830909,504,Studio Unit,55 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cadc4,830916,506,Live/Work Unit,103 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
+bbb19349-04db-4d1e-886a-6de27dc8e3fa-000cadc7,830919,507,Live/Work Unit,85 m²,Yes,0.5,1.2,2,35,22,23,0.25,0,,,
