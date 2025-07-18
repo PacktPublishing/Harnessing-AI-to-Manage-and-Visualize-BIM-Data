@@ -1,0 +1,77 @@
+"Element ID
+Custom Parameter","Room Number
+String
+Instance
+Identity Data","Room Name
+String
+Instance
+Identity Data","Area
+Schedule Parameter","PACKT_Incl
+Integer (Yes/No)
+Instance
+Other","PACKT_clo
+Double
+Instance
+Other","PACKT_met
+Double
+Instance
+Other","PACKT_Nocc
+Integer
+Instance
+Other","PACKT_rh
+Double
+Instance
+Other","PACKT_Tdb
+Double
+Instance
+Other","PACKT_Tr
+Double
+Instance
+Other","PACKT_Vr
+Double
+Instance
+Other","PACKT_W
+Double
+Instance
+Other","PACKT_PMV
+Double
+Instance
+Other","PACKT_CI
+Double
+Instance
+Other"
+828508,101,Café,60.0,Yes,0.5,1.2,24,35,22,23,0.25,0,,
+828515,102,Café Kitchen,40.0,Yes,0.5,1.2,3,35,22,23,0.25,0,,
+828534,105,Commercial/Retail,138.0,Yes,0.5,1.2,50,35,22,23,0.25,0,,
+828537,106,Residential Lobby,89.0,Yes,0.5,1.2,10,35,22,23,0.25,0,,
+828548,108,Commercial/Retail,214.0,Yes,0.5,1.2,70,35,22,23,0.25,0,,
+828551,109,Commercial/Retail,105.0,Yes,0.5,1.2,25,35,22,23,0.25,0,,
+829648,201,Corridor,55.0,Yes,0.5,1.2,3,35,22,23,0.25,0,,
+829709,202,Live/Work Unit,78.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829712,203,Studio Unit,55.0,Yes,0.5,1.2,1,35,22,23,0.25,0,,
+829715,204,Two Story Studio Unit,53.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829718,205,Live/Work Unit,103.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+2177792,200,Mezzanine Dining,79.0,Yes,0.5,1.2,66,35,22,23,0.25,0,,
+829817,301,Office Unit,225.0,Yes,0.5,1.2,24,35,22,23,0.25,0,,
+829824,302,Corridor,61.0,Yes,0.5,1.2,3,35,22,23,0.25,0,,
+829850,303,Live/Work Unit,78.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829853,304,Studio Unit,55.0,Yes,0.5,1.2,1,35,22,23,0.25,0,,
+829859,306,Live/Work Unit,106.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829862,307,Live/Work Unit,103.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829865,308,Live/Work Unit,54.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829868,309,Live/Work Unit,71.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+829896,401,Office Unit,216.0,Yes,0.5,1.2,22,35,28,23,0.25,0,,
+830675,406,Two Story Studio Unit,53.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830676,402,Corridor,59.0,Yes,0.5,1.2,3,35,22,23,0.25,0,,
+830678,403,Live/Work Unit,78.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830680,404,Studio Unit,55.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830682,407,Live/Work Unit,106.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830684,408,Live/Work Unit,103.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830686,409,Live/Work Unit,54.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830688,410,Live/Work Unit,71.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+841150,405,Live/Work Loft Unit,67.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830729,501,Office Unit,208.0,Yes,0.5,1.2,20,35,22,23,0.25,0,,
+830834,502,Corridor,75.0,Yes,0.5,1.2,3,35,22,23,0.25,0,,
+830909,504,Studio Unit,55.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830916,506,Live/Work Unit,103.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
+830919,507,Live/Work Unit,85.0,Yes,0.5,1.2,2,35,22,23,0.25,0,,
