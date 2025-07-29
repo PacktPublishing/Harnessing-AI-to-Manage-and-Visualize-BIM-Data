@@ -14,8 +14,10 @@ warnings.filterwarnings("ignore")
 # ── 1. LOAD ──────────────────────────────────────────────────────────────
 df = pd.read_csv("union_dataset.csv")
 
-# ── 2. QUICK TIDY-UP ─────────────────────────────────────────────────────
-df = df.drop(columns=["Area", "PACKT_Nocc"], errors="ignore")        # optional
+# ── 2. QUICK FEATURE TIDY-UP ───────────────────────────
+df["OccDensity"] = df["PACKT_Nocc"] / df["Area"]
+DROP = ["Area", "PACKT_Nocc"]                          # raw inputs no longer needed
+df = df.drop(columns=DROP, errors="ignore")      # optional
 id_mask = df.columns.str.lower().str.match(r'^external[_ ]?id')
 df      = df.loc[:, ~id_mask]                                         # remove IDs
 if "EXT_hour" in df.columns:                                          # encode time-of-day
